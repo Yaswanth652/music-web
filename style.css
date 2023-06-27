@@ -1,0 +1,345 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+:root{
+    --font-heading:grey;
+    --pera-font: rgba(48, 47, 47, 0.957);
+    --black:rgb(0, 0, 0);
+    --bg:rgb(206, 20, 163);
+}
+*{
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+.header {
+    width: 100%;
+    height: 70vh;
+    background: url(https://free4kwallpapers.com/uploads/originals/2016/04/07/guitar-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    top:0;
+    left:0;
+    right:0;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 1000;
+    color: white;
+    text-transform: uppercase;
+}
+span{
+    color: var(--bg);
+    text-transform: uppercase;
+
+}
+nav .links a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-right: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+nav .links a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:var(--bg);
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    bottom: -12px;
+    transition: 0.3s;
+}
+.nav-change{
+background: grey;
+}
+nav .links a:hover::after{
+    width: 100%;
+    transform-origin: left;
+}
+.btn{
+    padding: 10px;
+    margin: 1rem 0;
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    border: 0.1rem solid var(--bg);
+    border-radius: 3px;
+    background: none;
+    transition: all linear 0.3s;
+}
+.btn:hover{
+    background: var(--bg);
+    color: white;
+    transform: translate(0px, -3px);
+}
+nav #menu-btn, 
+#close {
+    color: rgb(243, 6, 203);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    
+}
+.header .content{
+    padding: 300px 7%;
+    color: var(--white);
+}
+.header .content h3{
+    color:black;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+}
+.header .content h1{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.heading{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3em;
+    color: rgb(249, 21, 181);
+}
+.heading span{
+    color: black;
+}
+.about .container{
+    display: flex;
+    justify-content: space-between;
+}
+.about .container .about-content p{
+    justify-content: center;
+    color: gray;
+}
+.about .container .about-content p span{
+    color: rgb(249, 21, 181);
+    font-size: 2.5rem;
+}
+.about .container .image{
+    flex-basis: 50%;
+    background-image: url(https://www.shutterstock.com/image-illustration/3d-illustration-musical-notes-signs-260nw-761313844.jpg);
+    background-size: cover;
+    padding: 12rem;
+    display: flex;
+    margin-left: 50px;
+}
+.about .container .about-content{
+    flex-basis: 40%;
+    margin-right: 30px;
+}
+.shop .container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 5rem;
+   padding: 0px 12rem;
+   padding-left: 7rem;
+}
+.shop .container .post{
+    border:1px solid black;
+    border-radius: 7px;
+    height: 350px;
+    cursor: pointer;
+    transition: 0.4s linear;
+}
+.shop .container .post:hover{
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.shop .container .post .shop-img{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+.shop .container .post .shop-img img{
+    border-radius: 6px;
+}
+.shop .container .post .shop-content{
+   text-align: center;
+}
+.shop .container .post .shop-content h3{
+    font-size: 1rem;
+    padding: 2px 0;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+.shop .container .post .shop-content .btn{
+    padding: 5px;
+    margin: 1rem 0;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+    font-weight: 30px;
+    border: 0.1rem solid var(--bg);
+    border-radius: 3px;
+    background: none;
+    transition: all linear 0.2s;
+}
+.shop .container .post .shop-content .btn:hover{
+    background: var(--bg);
+    color: white;
+    transform: translate(0px, -3px);
+}
+.shop .container .post .shop-content h5{
+    padding-top: 1px;
+    color: red;
+}
+.service .heading-description{
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+.service .heeding{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 3em;
+    color: rgb(11, 3, 4);
+}
+.service .heeding span{
+    color: rgb(248, 6, 212);
+}
+.service .heeding-description{
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+}
+.service .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+    padding: 3em 12rem;
+    padding-left: 10rem;
+ }
+ .service .container .post{
+    border:1px solid black;
+    border-radius: 7px;
+    height: 350px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.service .container .post .service-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.service .container .post .service-img img{
+    border-radius: 6px;
+}
+.service .container .post .service-content{
+   text-align: center;
+   padding: 10px;
+}
+.service .container .post .service-content .btn{
+    margin: 1rem 0;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+    font-weight: 30px;
+    border: 0.1rem solid var(--bg);
+    border-radius: 3px;
+    background: none;
+    transition: all linear 0.2s;
+}
+.service .container .post .service-content .btn:hover{
+    background: var(--bg);
+    color: white;
+    transform: translate(0px, -2px);
+}
+.service .container .post .service-content h6{
+    font-weight: 300;
+}
+.contact .heeding{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 10px;
+    color: rgb(11, 3, 4);
+}
+.contact .heeding span{
+    color: rgb(248, 6, 212);
+}
+.contact .heeding-description{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 50px;
+}
+.contact .container .post{
+    display: flex;
+    text-align: center;
+    padding: 1.5rem 0px;
+    background-color: rgba(14, 14, 14, 0.6);
+}
+.contact .container .post i{
+    padding-left: 14.2rem;
+}
+.contact .container .post h6{
+    padding-left: 10px;
+    color: #fff;
+}
+.contact .container{
+    padding: 20px 0px;
+}
+@media only screen and (max-width: 991px){
+html{
+    font-size: 55%;
+}
+nav{
+    padding: 3rem 3rem;
+}
+.content{
+    text-align: center;
+}
+}
+@media only screen and (max-width: 768px){
+    nav #menu-btn{
+        display: inline;
+    }
+    .nav .links{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width:100%;
+        height: 100vh;
+        background: #eee;
+        transition: 0.5s;
+        background-color: black;
+    }
+    .nav .links a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+    }
+    .about .container{
+        flex-direction: column;
+    }
+    .about .container .about-content{
+        text-align: center;
+    }
+}
